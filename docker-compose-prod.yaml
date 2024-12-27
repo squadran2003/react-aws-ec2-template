@@ -1,0 +1,14 @@
+version: '3'
+services:
+  deploy_react_ec2:
+    restart: always
+    build:
+      context: ./app
+      dockerfile: production/Dockerfile
+    volumes:
+      - ./app:/usr/src/app
+      - /etc/letsencrypt:/etc/letsencrypt
+    ports:
+      - 3001:3001
+      - 443:443
+    stdin_open: true

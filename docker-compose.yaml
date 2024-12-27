@@ -1,0 +1,13 @@
+version: '3'
+services:
+  deploy_react_ec2:
+    build:
+      context: ./
+    command: >
+      sh -c "
+              npm start "
+    volumes:
+      - ./app:/usr/src/app
+    ports:
+      - 3005:3005
+    stdin_open: true
