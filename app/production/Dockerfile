@@ -36,7 +36,7 @@ COPY --from=build /usr/src/app/build /usr/share/nginx/html
 
 # Expose the port the app runs on
 EXPOSE 80
-EXPOSE 443
+# EXPOSE 443
 
 # Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]
