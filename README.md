@@ -23,15 +23,20 @@ This repository provides a template for deploying a React application to an AWS 
     ```sh
     docker-compose up --build
     ```
-
-3. Build and run the Docker containers in prod:
+## EC2 bsetup
+1. Create your instance
+2. add your ssh to the instance so you can login
+3. Install Docker and Docker Compose by following this [step-by-step tutorial](https://medium.com/@tomer.klein/step-by-step-tutorial-installing-docker-and-docker-compose-on-ubuntu-a98a1b7aaed0).
+4. clone the repo
+5. cd into the repo 
+6. Build and run the Docker containers in prod:
     ```sh
     docker-compose -f docker-compose-prod up --build
     ```
 
-4. Access the React app at `http://<your-ec2-instance-ip>`.
+7. Access the React app at `http://<your-ec2-instance-ip>`.
 
-5. SSl
+8. SSl
     change the production/ngnix to use 443, use letsencrypt for a certicate and dont forget to change your security group to allow traffic on 443.
 
 ## License
