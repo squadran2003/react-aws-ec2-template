@@ -9,7 +9,6 @@ services:
       - ./app:/usr/src/app
       - /etc/letsencrypt:/etc/letsencrypt
     ports:
-      - 3001:3001
       - 443:443
       - 80:80
     stdin_open: true
